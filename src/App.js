@@ -42,7 +42,28 @@ function App() {
   // }
 
   // task-4 
-  
+  // const person = [
+  //   {
+  //     name: "Amit",
+  //     age: 25,
+  //     course: [
+  //       "C",
+  //       "HTML"
+  //     ]
+  //   },
+  //   {
+  //     name: "Ajay",
+  //     age: 40,
+  //     course: [
+  //       "Java",
+  //       "JavaScript"
+  //     ]
+  //   }
+  // ]
+  // person.map((p)=> {
+  //   console.log(p.name , p.age);
+  //   p.course .map((c)=> console.log(c));
+  // })
 
 }
 
