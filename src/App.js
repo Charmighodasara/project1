@@ -118,8 +118,8 @@ function App() {
       console.log(data[k].name , data[k].age , data[k].city);
     }else if(k === 'courses'){
       data[k].map((d)=> console.log(d));
-    }
-    console.log(data[k]);
+    }else
+    // console.log(data[k]);
     for(let j in data[k]){
       console.log(data[k][j].admission ,data[k][j].vacant_seat );
     }
