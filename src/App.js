@@ -3,7 +3,7 @@ import './App.css';
 import Demo from './components/Demo';
 
 function App() {
-  task-1 
+  // task-1 
   const person = {
     name: "Amit",
     age: 25
