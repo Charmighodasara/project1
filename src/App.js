@@ -87,32 +87,34 @@ function App() {
       status: false
     }
   ];
-  // let {id , name, quantity ,price ,expiry ,status} = data;
   
   return (
     
     <div>
       <table border='1'>
+        <thead>
         <th>Id</th>
         <th>Name</th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Expiry</th>
         <th>Status</th>
+        </thead>
         {
           data.map((d, i) => {
-            return (  
+              let {id,name,quantity,price,expiry,status} = d
+            return (
               <tr>
-                <td>{d.id}</td>
-                <td>{d.name}</td>
-                <td>{d.quantity}</td>
-                <td>{d.price}</td>
-                <td>{d.expiry}</td>
-                <td>{d.status.toSring()}</td>
+                <td>{id}</td>
+                <td>{name}</td>
+                <td>{quantity}</td>
+                <td>{price}</td>
+                <td>{expiry}</td>
+                <td>{status.toString()}</td>
               </tr>
             )
 
-            
+
           })
 
         }
@@ -121,6 +123,7 @@ function App() {
 
 
   );
+  
 }
 
 
