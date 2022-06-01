@@ -94,7 +94,7 @@ function App() {
         age: 35,
         salary: 40000,
         bonus: 1000,
-        status: true
+        status: true, 
       },
       {
         name: "ajay",
@@ -132,14 +132,14 @@ function App() {
 
   // Employee 
   let fEmployee = Employee.filter((e, i) => e.status === true);
-  // let total = fEmployee.reduce((acc , t , i) => acc + t.salary  ,0);
-  let ebonus = fEmployee.reduce ((acc , f , i) => acc + f.salary + f.bonus , 0)
-  // console.log(total);
+  let ebonus = fEmployee.reduce((acc, f, i) => acc + f.salary + f.bonus, 0)
+
+
 
   return (
 
     <div>
-      <table border='1' cellspacing="0">
+      <table border='1' cellspacing="0" cellPadding="10">
         <th>Id</th>
         <th>Name</th>
         <th>Quantity</th>
@@ -164,19 +164,19 @@ function App() {
           })
         }
       </table>
-{/* Employee table  */}
-      <table border='1' cellspacing="0">
+      {/* Employee table  */}
+      <table border='1' cellspacing="0" cellPadding="10">
         <th>Name</th>
         <th>Age</th>
         <th>Salary</th>
         <th>Bonus</th>
         <th>Status</th>
+        <th>Salary + bonus</th>
         <th>total salary</th>
-        <th>total</th>
+
         {
           fEmployee.map((e, i) => {
-            // let total = fEmployee.reduce((acc , t , i) => acc + e.salary  ,0);
-            let { name, age, salary, bonus, status} = e
+            let { name, age, salary, bonus, status } = e;
             return (
               <tr key={i}>
                 <td>{name}</td>
@@ -184,8 +184,8 @@ function App() {
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
-                {/* <td>{total}</td> */}
-                {/* {i === 0 ? <td rowSpan={4}>{ebonus}</td> : null} */}
+                 <td>{salary + bonus}</td>
+                {i === 0 ? <td rowSpan={4}>{ebonus}</td> : null}
               </tr>
             )
           })
