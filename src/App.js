@@ -132,8 +132,9 @@ function App() {
 
   // Employee 
   let fEmployee = Employee.filter((e, i) => e.status === true);
+  // let total = fEmployee.reduce((acc , t , i) => acc + t.salary  ,0);
   let ebonus = fEmployee.reduce ((acc , f , i) => acc + f.salary + f.bonus , 0)
-  console.log(ebonus);
+  // console.log(total);
 
   return (
 
@@ -174,7 +175,8 @@ function App() {
         <th>total</th>
         {
           fEmployee.map((e, i) => {
-            let { name, age, salary, bonus, status } = e
+            // let total = fEmployee.reduce((acc , t , i) => acc + e.salary  ,0);
+            let { name, age, salary, bonus, status} = e
             return (
               <tr key={i}>
                 <td>{name}</td>
@@ -182,7 +184,7 @@ function App() {
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
-                <td>{}</td>
+                {/* <td>{total}</td> */}
                 {/* {i === 0 ? <td rowSpan={4}>{ebonus}</td> : null} */}
               </tr>
             )
