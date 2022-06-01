@@ -1,199 +1,129 @@
+
 import './App.css';
 import Demo from './components/Demo';
 
 function App() {
+  // task-1 
+  const person = {
+    name: "Amit",
+    age: 25
+  }
+  console.log(person.name, person.age);
 
-  // // spreading - for array 
-  // let arr1 = [10, 20, 30, 40, 50];
-
-  // // copy
-  // let arr2 = [...arr1];
-  // console.log(arr2);
-
-
-  // // merging
-  // let arr3 = [70, ...arr1, 90];
-  // console.log(arr3);
-
-  // //destructruing
-  // let [a, b, c, d, e] = arr1;
-  // console.log(c);
-
-
-  // // spreading - for object
-  // let obj = {
-  //   id: 101,
-  //   name: 'charmi'
-  // };
-
-  // // copy 
-  // let obj1 = { ...obj };
-  // console.log(obj1);
-
-  // // merging 
-  // let obj2 = {
-  //   id: 102,
-  //   name: 'ghodasara',
-  //   ...obj,
-  //   location: 'surat'
-  // };
-  // console.log(obj2);
-
-  // //destructuring 
-  // let {id , name , location} = obj2;
-  // console.log(id);
-
-
-  let data = [
+  // task-2 
+  const person1 = [
     {
-      id: 101,
-      name: 'Abacavir',
-      quantity: 25,
-      price: 150,
-      expiry: 2022,
-      status: true
+      name: "Amit",
+      age: 25,
     },
     {
-      id: 102,
-      name: 'Eltrombopag',
-      quantity: 90,
-      price: 550,
-      expiry: 2021,
-      status: true
+      name: "Piyush",
+      age: 40,
     },
-    {
-      id: 103,
-      name: 'Meloxicam',
-      quantity: 85,
-      price: 450,
-      expiry: 2025,
-      status: false
-    },
-    {
-      id: 104,
-      name: 'Allopurinol',
-      quantity: 50,
-      price: 600,
-      expiry: 2023,
-      status: true
-    },
-    {
-      id: 105,
-      name: 'Phenytoin',
-      quantity: 63,
-      price: 250,
-      expiry: 2021,
-      status: false
-    }
   ];
+  person1.map((p) => console.log(p.name, p.age));
 
-  let Employee =
-    [
-      {
-        name: "amit",
-        age: 35,
-        salary: 40000,
-        bonus: 1000,
-        status: true,
+  // task-3 
+  const person2 = {
+    name: "Amit",
+    age: 25,
+    course: [
+      "C",
+      "HTML"
+    ]
+  }
+
+  for (let k in person2) {
+    if (k === 'course') {
+      person2[k].map((p) => console.log(p));
+    } else {
+      console.log(person2[k]);
+    }
+  }
+
+  // task-4 
+  const person3 = [
+    {
+      name: "Amit",
+      age: 25,
+      course: [
+        "C",
+        "HTML"
+      ]
+    },
+    {
+      name: "Ajay",
+      age: 40,
+      course: [
+        "Java",
+        "JavaScript"
+      ]
+    }
+  ]
+  person3.map((p)=> {
+    console.log(p.name , p.age);
+    p.course .map((c)=> console.log(c));
+  })
+
+  // task-5
+  const myObj = {
+    name: "John",
+    age: 30,
+    cars: {
+      car1: "Ford",
+      car2: "BMW",
+      car3: "Fiat"
+    }
+  }
+  for (let k in myObj) {
+    if (k === 'cars') {
+      for (let j in myObj[k]) {
+        console.log(myObj[k][j]);
+      }
+    } else {
+      console.log(myObj[k]);
+    }
+  }
+
+  // task-6 
+  const data = {
+    personal_info: {
+      name: 'amit',
+      age: 25,
+      city: 'surat'
+    },
+    courses: ["C", "JavaScript", "React"],
+    branches: {
+      rwl: {
+        admission: 50,
+        vacant_seat: 10
       },
-      {
-        name: "ajay",
-        age: 25,
-        salary: 38000,
-        bonus: 2000,
-        status: false
+      rw2: {
+        admission: 30,
+        vacant_seat: 20
       },
-      {
-        name: "mayur",
-        age: 23,
-        salary: 50000,
-        bonus: 500,
-        status: true
+      rw3: {
+        admission: 25,
+        vacant_seat: 25
       },
-      {
-        name: "jay",
-        age: 29,
-        salary: 35000,
-        bonus: 600,
-        status: true
-      },
-      {
-        name: "raj",
-        age: 33,
-        salary: 22000,
-        bonus: 2000,
-        status: true
-      },
-    ];
+      rw4: {
+        admission: 40,
+        vacant_seat: 10
+      }
+    }
+  }
 
-  // madicine data 
-  let fData = data.filter((d, i) => d.status === true && d.expiry >= 2022);
-  let dSum = fData.reduce((acc, d, i) => acc + d.price, 0);
-
-  // Employee 
-  let fEmployee = Employee.filter((e, i) => e.status === true);
-  let ebonus = fEmployee.reduce((acc, f, i) => acc + f.salary + f.bonus, 0)
-
-  return (
-
-    <div>
-      <table border='1' cellspacing="0" cellPadding="10">
-        <th>Id</th>
-        <th>Name</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Expiry</th>
-        <th>Status</th>
-        <th>Total price</th>
-        {
-          fData.map((d, i) => {
-            let { id, name, quantity, price, expiry, status } = d
-            return (
-              <tr key={i}>
-                <td>{id}</td>
-                <td>{name}</td>
-                <td>{quantity}</td>
-                <td>{price}</td>
-                <td>{expiry}</td>
-                <td>{status.toString()}</td>
-                {i === 0 ? <td rowSpan={2}>{dSum}</td> : null}
-              </tr>
-            )
-          })
-        }
-      </table>
-      {/* Employee table  */}
-      
-      <table border='1' cellspacing="0" cellPadding="10">
-        <th>Name</th>
-        <th>Age</th>
-        <th>Salary</th>
-        <th>Bonus</th>
-        <th>Status</th>
-        <th>Salary + bonus</th>
-        <th>total salary</th>
-
-        {
-          fEmployee.map((e, i) => {
-            let { name, age, salary, bonus, status } = e;
-            return (
-              <tr key={i}>
-                <td>{name}</td>
-                <td>{age}</td>
-                <td>{salary}</td>
-                <td>{bonus}</td>
-                <td>{status.toString()}</td>
-                <td>{salary + bonus}</td>
-                {i === 0 ? <td rowSpan={4}>{ebonus}</td> : null}
-              </tr>
-            )
-          })
-        }
-      </table>
-    </div>
-
-
-  );
+  for(let k in data){
+    if(k === 'personal_info'){
+      console.log(data[k].name , data[k].age , data[k].city);
+    }else if(k === 'courses'){
+      data[k].map((d)=> console.log(d));
+    }else
+    // console.log(data[k]);
+    for(let j in data[k]){
+      console.log(data[k][j].admission ,data[k][j].vacant_seat );
+    }
+  }
 
 }
 
