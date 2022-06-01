@@ -86,6 +86,7 @@ function App() {
       status: false
     }
   ];
+
   let Employee =
     [
       {
@@ -125,48 +126,64 @@ function App() {
       },
     ];
 
+  // madicine data 
+  let fData = data.filter((d, i) => d.status === true && d.expiry >= 2022);
+  let dSum = fData.reduce((acc, d, i) => acc + d.price, 0);
+
+  // Employee 
+  let fEmployee = Employee.filter((e, i) => e.status === true);
+  let ebonus = fEmployee.reduce ((acc , f , i) => acc + f.salary + f.bonus , 0)
+  console.log(ebonus);
+
   return (
 
     <div>
       <table border='1' cellspacing="0">
-          <th>Id</th>
-          <th>Name</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Expiry</th>
-          <th>Status</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Expiry</th>
+        <th>Status</th>
+        <th>Total price</th>
         {
-          data.map((d, i) => {
+          fData.map((d, i) => {
             let { id, name, quantity, price, expiry, status } = d
             return (
-              <tr>
+              <tr key={i}>
                 <td>{id}</td>
                 <td>{name}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
                 <td>{expiry}</td>
                 <td>{status.toString()}</td>
+                {i === 0 ? <td rowSpan={2}>{dSum}</td> : null}
               </tr>
             )
           })
         }
       </table>
+{/* Employee table  */}
       <table border='1' cellspacing="0">
-          <th>Name</th>
-          <th>Age</th>
-          <th>Salary</th>
-          <th>Bonus</th>
-          <th>Status</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Bonus</th>
+        <th>Status</th>
+        <th>total salary</th>
+        <th>total</th>
         {
-          Employee.map((e, i) => {
+          fEmployee.map((e, i) => {
             let { name, age, salary, bonus, status } = e
             return (
-              <tr>
+              <tr key={i}>
                 <td>{name}</td>
                 <td>{age}</td>
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
+                <td>{}</td>
+                {/* {i === 0 ? <td rowSpan={4}>{ebonus}</td> : null} */}
               </tr>
             )
           })
