@@ -163,6 +163,7 @@ function App() {
         }
       </table>
       {/* Employee table  */}
+      
       <table border='1' cellspacing="0" cellPadding="10">
         <th>Name</th>
         <th>Age</th>
