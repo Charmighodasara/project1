@@ -94,7 +94,7 @@ function App() {
         age: 35,
         salary: 40000,
         bonus: 1000,
-        status: true, 
+        status: true,
       },
       {
         name: "ajay",
@@ -133,8 +133,6 @@ function App() {
   // Employee 
   let fEmployee = Employee.filter((e, i) => e.status === true);
   let ebonus = fEmployee.reduce((acc, f, i) => acc + f.salary + f.bonus, 0)
-
-
 
   return (
 
@@ -184,7 +182,7 @@ function App() {
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
-                 <td>{salary + bonus}</td>
+                <td>{salary + bonus}</td>
                 {i === 0 ? <td rowSpan={4}>{ebonus}</td> : null}
               </tr>
             )
