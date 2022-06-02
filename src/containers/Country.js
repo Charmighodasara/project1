@@ -20,7 +20,7 @@ class Country extends Component {
         return (
             <div>
                 <p>{this.state.countryName}</p>
-                <button onClick={this.changeCountry}>change country</button>              
+                <button onClick={() =>this.changeCountry()}>change country</button>              
             </div>
         );
     }
