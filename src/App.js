@@ -7,7 +7,7 @@ import CountryFun from './containers/CountryFun';
 function App() {
   return (
     <div>
-      {/* <Country /> */}
+      <Country />
       <CountryFun />
     </div>
   );
