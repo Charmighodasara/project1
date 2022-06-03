@@ -13,6 +13,7 @@ function CityFun({id , city_Name}) {
             <p>{changCity}</p>
             <button onClick={() => changeCity()}>change city</button>
             <p>{id}{city_Name}</p>
+            <p>famous places in country is : {changCity === ('ghandhinagar') ? "mahatma mandir": "Dumas beach"}</p>
         </div>
     );
 }
