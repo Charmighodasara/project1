@@ -15,7 +15,6 @@ class City extends Component {
         this.setState({
              cityName: 'Gandhinagar',
              famous_Place : 'mahatma mandir'
-
         })
     }
 
