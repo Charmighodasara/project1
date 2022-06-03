@@ -6,13 +6,16 @@ class City extends Component {
         super(props);
         
         this.state ={
-            cityName: 'surat'
+            cityName: 'surat',
+            famous_Place : 'Dumas beach'
         }
     }
 
     changCity = () =>{
         this.setState({
-             cityName: 'Gandhinagar'
+             cityName: 'Gandhinagar',
+             famous_Place : 'mahatma mandir'
+
         })
     }
 
@@ -22,6 +25,8 @@ class City extends Component {
                 <p>{this.state.cityName}</p>
                 <button onClick={() => this.changCity()}> change city</button>
                 <p>{this.props.id} {this.props.country_Name}</p>
+                
+                <p>famous place in this city is : {this.state.famous_Place}</p>
             </div>
         );
     }
