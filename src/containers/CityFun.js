@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function CityFun({id , city_Name}) {
+function CityFun(props) {
 
     const [changCity , setChangCity] = useState ('ghandhinagar')
 
@@ -12,7 +12,7 @@ function CityFun({id , city_Name}) {
         <div>
             <p>{changCity}</p>
             <button onClick={() => changeCity()}>change city</button>
-            <p>{id}{city_Name}</p>
+           
         </div>
     );
 }

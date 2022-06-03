@@ -24,10 +24,7 @@ class Country extends Component {
             <div>
                 <p>{this.state.countryName}</p>
                 <button onClick={() => this.changeCountry()}>change country</button>            
-                  
-                <p>famous places in this country is : {this.state.countryName ==='India' ? "tajmahal": "Magic Kingdom, Walt Disney World" }</p>
 
-                <City id="110" country_Name={this.state.countryName}/>
             </div>
         );
     }

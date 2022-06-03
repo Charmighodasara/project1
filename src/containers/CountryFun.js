@@ -14,7 +14,7 @@ function CountryFun(props) {
             <p>{countryName}</p>
             <button onClick={() => changeCountry()}>change country</button>
             <CityFun id="105 " city_Name ={countryName} />
-            <p>famous places in country is : {countryName === ('India') ? "tajmahal": "Golden Gate Park"}</p>
+           
         </div>
     );
 }
