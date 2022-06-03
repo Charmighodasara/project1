@@ -10,7 +10,7 @@ class Country extends Component {
         }
     }
     
-    changeCountry = () =>{
+    changeCountry = () => {
         this.setState({
             countryName : 'us',
         })
