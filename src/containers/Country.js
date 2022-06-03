@@ -5,13 +5,13 @@ class Country extends Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {
             countryName : 'India',
         }
     }
     
-    changeCountry = () =>{
+    changeCountry = () => {
         this.setState({
             countryName : 'us',
         })
