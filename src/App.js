@@ -6,11 +6,13 @@ import CityFun from './containers/CityFun';
 import Country from './containers/Country';
 import CountryFun from './containers/CountryFun';
 import Time from './containers/time/Time';
+import TimeFunctin from './containers/time/TimeFunctin';
 
 function App() {
   return (
     <div>
-      <Time />
+      {/* <Time /> */}
+      <TimeFunctin />
       {/* <Country /> */}
       {/* <CountryFun /> */}
       {/* <City /> */}
