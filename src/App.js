@@ -13,14 +13,9 @@ import TimeFunctin from './containers/time/TimeFunctin';
 function App() {
   return (
     <div>
-      <Counter />
-      {/* <CounterFun />   */}
-      {/* <Time /> */}
-      {/* <TimeFunctin /> */}
-      {/* <Country /> */}
-      {/* <CountryFun /> */}
-      {/* <City /> */}
-      {/* <CityFun /> */}
+      {/* <Counter /> */}
+      <CounterFun />  
+     
     </div>
   );
 }
