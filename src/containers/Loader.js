@@ -1,21 +1,18 @@
 import React from 'react';
+import Home from './Home';
 
 function Loader(Component) {
-    return function WihLoadingComponent({ setLoader, setData }) {
-        if (setLoader) {
+    return function WihLoadingComponent({ isLoading }) {
+        if (isLoading) {
             return (
-             <p>{}</p>
-        );
-        }else{
-            return (
-             <p>{}</p>
-                );
-        }
-        return (
-            <div>
                 <p>Loading....</p>
-            </div>
-        );
+            );
+        } else {
+            return (
+               <Home />
+            )
+        }
+      
     }
 }
 
