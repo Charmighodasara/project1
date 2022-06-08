@@ -1,7 +1,7 @@
 import React from 'react';
 import Loader from './Loader';
 
-function Home({ data }) {
+function Home({data}) {
     return (
         <div>
             {
@@ -9,8 +9,8 @@ function Home({ data }) {
                     return(
                         <div key={i}>
                         <h3>{d.id}</h3>
-                        <h4>{d.id}</h4>
-                    </div>
+                        <h4>{d.name}</h4>
+                        </div>
                     )
                 })
             }

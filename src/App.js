@@ -5,10 +5,10 @@ import Loader from './containers/Loader';
 import Home from './containers/Home';
 
 const HomewithLoader = Loader(Home)
-function App() {
-  
+
+function App() {  
   const [loader, setLoader] = useState(false)
-  const [data , setData] = ([])
+  const [data , setData] = useState([])
 
   const orgData = [
     {id:101 , name: 'charmi'},
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <HomewithLoader isLoading={loader} isdata={data}/>
+      <HomewithLoader isLoading={loader} data={data}/>
     </div>
   );
 }
