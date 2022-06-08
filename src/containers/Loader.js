@@ -1,11 +1,22 @@
 import React from 'react';
 
 function Loader(Component) {
-    return (
-        <div>
-            
-        </div>
-    );
+    return function WihLoadingComponent({ setLoader, setData }) {
+        if (setLoader) {
+            return (
+             <p>{}</p>
+        );
+        }else{
+            return (
+             <p>{}</p>
+                );
+        }
+        return (
+            <div>
+                <p>Loading....</p>
+            </div>
+        );
+    }
 }
 
 export default Loader;

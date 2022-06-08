@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <HomewithLoader isLoading ={loader} isdata ={data}/>
+      <HomewithLoader isLoading={loader} isdata={data}/>
     </div>
   );
 }
