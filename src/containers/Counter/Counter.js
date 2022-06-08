@@ -27,15 +27,13 @@ class Counter extends Component {
         console.log('decrement');
     }
     
-    
     //2.
     render() {
-
         return (
             <div>
                 <p>counter</p>
                 <button onClick={() => this.increment()}>  +  </button>
-                <span>{this.state.count}</span>
+                <span> {this.state.count} </span>
                 <button onClick={() => this.decrement()}>  -  </button>
             </div>
         );
