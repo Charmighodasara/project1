@@ -20,6 +20,7 @@ function CounterFun(props) {
     }, [count])
     return (
         <div>
+            <p>counter</p>
             <button onClick={() => decrement()}>-</button>
             <span> {count} </span>
             <button onClick={() => increment()}>+</button>
