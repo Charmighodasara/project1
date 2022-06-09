@@ -1,15 +1,16 @@
 import React from 'react';
 
 function Loader(Component) {
-    return function WihLoadingComponent({ isLoading, data }) {
+    return function WithLoadingComponent({ isLoading, data}) {
         if (isLoading) {
             return (
                 <p>Loading....</p>
             );
         } else {
             return (
-               <Component data={data}/>
-
+                <>
+                    <Component data={data} />
+                </>
             )
         }
 
