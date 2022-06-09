@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function TimeFunctin(props) {
+function TimeFun(props) {
     const [time, setTime] = useState(new Date())
 
     const tick = () => {
@@ -26,4 +26,4 @@ function TimeFunctin(props) {
     );
 }
 
-export default TimeFunctin;
+export default TimeFun;
