@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Loader(Component) {
-    return function WithLoadingComponent({ isLoading, data}) {
+    return function WithLoadingComponent({ isLoading, data ,page}) {
         if (isLoading) {
             return (
                 <p>Loading....</p>
@@ -9,7 +9,7 @@ function Loader(Component) {
         } else {
             return (
                 <>
-                    <Component data={data} />
+                    <Component data={data}  page={page}/>
                 </>
             )
         }
