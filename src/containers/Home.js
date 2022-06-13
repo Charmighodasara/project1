@@ -5,7 +5,7 @@ function Home({ data }) {
     return (
         <div>
             {
-                <table border={1} cellPadding={0} cellSpacing={0}>
+                <table border={1} cellPadding={10} cellSpacing={0}>
                     <tr>
                         <th><p>id</p></th>
                         <th><p>name</p></th>
