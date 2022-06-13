@@ -36,7 +36,7 @@ function App(props) {
   const fData = employeeData.filter((e, i)=> e.salary > 25000 )
   useEffect(() => {
     setLoader(true);
-    setTimeout(() => { setLoader(false); setData(fData) }, 1000)
+    setTimeout(() => { setLoader(false); setData(fData) }, 2000)
   }, [])
 
   return (
